@@ -1,0 +1,5 @@
+package com.ezen.www.config;
+
+public class WebConfig {
+
+}

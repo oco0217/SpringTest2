@@ -1,0 +1,34 @@
+
+4월 30, 2024 17:15:52.162 NEW SESSION
+4월 30, 2024 17:15:52.162 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 17:16:17.531 Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 30, 2024 17:37:16.245 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 01, 2024 12:31:53.459 NEW SESSION
+5월 01, 2024 12:31:53.459 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 12:45:14.618 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 12:46:38.991 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 12:49:12.820 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 12:52:23.955 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 12:58:44.273 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 12:58:55.574 [12256:8812:0501/125855.574:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 01, 2024 12:59:11.616 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 13:01:00.300 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 13:35:00.875 [5028:3188:0501/133500.875:ERROR:device_event_log_impl.cc(195)] [13:35:00.875] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 01, 2024 14:16:36.687 [5028:3188:0501/141636.687:ERROR:device_event_log_impl.cc(195)] [14:16:36.687] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 01, 2024 14:23:22.693 [5028:3188:0501/142322.693:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 01, 2024 14:27:30.575 [5028:3188:0501/142730.574:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 01, 2024 14:37:26.439 [5028:3188:0501/143726.439:ERROR:device_event_log_impl.cc(195)] [14:37:26.438] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 01, 2024 14:48:19.963 [5028:3188:0501/144819.963:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 01, 2024 15:17:13.900 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 15:55:38.641 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 15:58:57.172 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 16:08:58.04 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 16:36:16.995 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 16:41:16.135 [9728:4960:0501/164116.135:ERROR:device_event_log_impl.cc(195)] [16:41:16.135] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 01, 2024 16:49:25.840 [9728:4960:0501/164925.840:ERROR:device_event_log_impl.cc(195)] [16:49:25.840] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 01, 2024 16:51:16.379 [9728:4960:0501/165116.379:ERROR:device_event_log_impl.cc(195)] [16:51:16.378] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 01, 2024 16:54:42.663 [9728:4960:0501/165442.662:ERROR:device_event_log_impl.cc(195)] [16:54:42.662] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 01, 2024 17:41:43.891 [9728:4960:0501/174143.891:ERROR:device_event_log_impl.cc(195)] [17:41:43.891] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 01, 2024 17:49:36.762 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 01, 2024 17:51:13.732 [9528:6056:0501/175113.732:ERROR:device_event_log_impl.cc(195)] [17:51:13.732] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)

@@ -1,0 +1,16 @@
+Console.highWaterMark=8008000
+Console.lowWaterMark=8000000
+DEBUG.consoleOpenOnOut=false
+eclipse.preferences.version=1
+org.eclipse.debug.ui.MemoryHistoryKnownColor=235,235,235
+org.eclipse.debug.ui.MemoryHistoryUnknownColor=170,175,185
+org.eclipse.debug.ui.PREF_CHANGED_VALUE_BACKGROUND=150,80,115
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+org.eclipse.debug.ui.changedDebugElement=255,128,128
+org.eclipse.debug.ui.consoleBackground=64,0,0
+org.eclipse.debug.ui.errorColor=255,0,0
+org.eclipse.debug.ui.inColor=0,200,125
+org.eclipse.debug.ui.outColor=255,255,255
+org.eclipse.debug.ui.save_dirty_editors_before_launch=never
+overriddenByCSS=,org.eclipse.debug.ui.MemoryHistoryKnownColor,org.eclipse.debug.ui.MemoryHistoryUnknownColor,org.eclipse.debug.ui.PREF_CHANGED_VALUE_BACKGROUND,org.eclipse.debug.ui.changedDebugElement,
+preferredTargets=default\:default|
