@@ -1,0 +1,6 @@
+package com.ezen.www.service;
+
+
+public class CommentServiceImple implements CommentService{
+
+}

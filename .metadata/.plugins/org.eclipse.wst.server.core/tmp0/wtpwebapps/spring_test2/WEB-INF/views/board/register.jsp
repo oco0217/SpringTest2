@@ -4,7 +4,7 @@
 
 <div class="container-md">
 	<h1>Board Register Page</h1>
-	<form action="/board/insert" method="post">
+	<form action="/board/insert" method="post" enctype="multipart/form-data">
 
 		<div class="mb-3">
 			<label for="t" class="form-label">title</label> <input type="text"
@@ -23,7 +23,7 @@
 
 		<!-- 파일 입력라인 추가 -->
 
-		<!-- <div class="mb-3">
+		 <div class="mb-3">
 			<label for="file" class="form-label">Files</label> <input type="file"
 				class="form-control" id="file" name="files" multiple="multiple"
 				style="display: none"> <br>
@@ -34,7 +34,7 @@
 		파일 목록 효시라인
 		<div class="mb-3" id="fileZone">
 		
-		</div> -->
+		</div> 
 
 		<button type="submit" class="btn btn-primary" id="regBtn">등록</button>
 
@@ -43,7 +43,7 @@
 <jsp:include page="../layout/footer.jsp" />
 
 
-<!-- <script type="text/javascript" src="/resources/js/boardRegister.js"></script> -->
+ <script type="text/javascript" src="/re/js/boardRegister.js"></script> 
 
 
 

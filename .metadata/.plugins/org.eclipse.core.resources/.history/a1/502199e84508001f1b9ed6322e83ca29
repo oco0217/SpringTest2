@@ -1,0 +1,13 @@
+package com.ezen.www.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ezen.www.repository.CommentDAO;
+
+@Service
+public class CommentServiceImple implements CommentService{
+	
+	private final CommentDAO cdao;
+
+}

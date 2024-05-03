@@ -1,0 +1,24 @@
+package com.ezen.www.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+public class FileVO {
+
+	@Getter
+	@Setter
+	@ToString
+	@NoArgsConstructor
+	@AllArgsConstructor
+	private String uuid;
+	private String save_dir;
+	private String fileName;
+	private int fileType;
+	private int bno;
+	private int fileSize;
+	private String regDate;
+	
+}

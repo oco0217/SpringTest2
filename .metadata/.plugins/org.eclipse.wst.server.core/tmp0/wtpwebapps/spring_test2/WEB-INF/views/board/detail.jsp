@@ -1,38 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="../layout/header.jsp" />
 
-<div  class="container-md">
-<h1>Board Detail Page</h1>
+<div class="container-md">
+	<h1>Board Detail Page</h1>
 
-<%-- <c:set value="${bdto.bvo }" var="bvo" /> --%>
+	<%-- <c:set value="${bdto.bvo }" var="bvo" /> --%>
 
-<div class="mb-3">
-  <label for="n" class="form-label">bno</label>
-  <input type="text" class="form-control" id="n" placeholder="bno" name="bno" value="${bvo.bno }" readonly="readonly">
-</div>
-<div class="mb-3">
-  <label for="t" class="form-label">title</label>
-  <input type="text" class="form-control" id="t" placeholder="title" name="title" value="${bvo.title }" readonly="readonly">
-</div>
-<div class="mb-3">
-  <label for="w" class="form-label">writer</label>
-  <input type="text" class="form-control" id="w" placeholder="writer" name="writer" value="${bvo.writer }" readonly="readonly">
-</div>
-<div class="mb-3">
-  <label for="r" class="form-label">작성일</label>
-  <input type="text" class="form-control" id="r" placeholder="reg_date" name="reg_daet" value="${bvo.regDate }" readonly="readonly">
-</div>
-<div class="mb-3">
-  <label for="w" class="form-label">content</label>
-  <textarea class="form-control" id="c" name="content" aria-label="With textarea" readonly="readonly">${bvo.content }</textarea>
-</div>
+	<div class="mb-3">
+		<label for="n" class="form-label">bno</label> <input type="text"
+			class="form-control" id="n" placeholder="bno" name="bno"
+			value="${bvo.bno }" readonly="readonly">
+	</div>
+	<div class="mb-3">
+		<label for="t" class="form-label">title</label> <input type="text"
+			class="form-control" id="t" placeholder="title" name="title"
+			value="${bvo.title }" readonly="readonly">
+	</div>
+	<div class="mb-3">
+		<label for="w" class="form-label">writer</label> <input type="text"
+			class="form-control" id="w" placeholder="writer" name="writer"
+			value="${bvo.writer }" readonly="readonly">
+	</div>
+	<div class="mb-3">
+		<label for="r" class="form-label">작성일</label> <input type="text"
+			class="form-control" id="r" placeholder="reg_date" name="reg_daet"
+			value="${bvo.regDate }" readonly="readonly">
+	</div>
+	<div class="mb-3">
+		<label for="w" class="form-label">content</label>
+		<textarea class="form-control" id="c" name="content"
+			aria-label="With textarea" readonly="readonly">${bvo.content }</textarea>
+	</div>
 
-<!-- FIle upload 표시라인 -->
-<%-- <c:set value="${bdto.flist }" var="flist" /> --%>
+	<!-- FIle upload 표시라인 -->
+	<%-- <c:set value="${bdto.flist }" var="flist" /> --%>
 
-<%-- 	<div class="mb-3">
+	<%-- 	<div class="mb-3">
 
 		<ul class="list-group list-group-flush">
 
@@ -65,55 +70,82 @@
 
 
 	<br>
-<hr>
-<!-- Comment line -->
+	<hr>
+	<!-- Comment line -->
 
-<!-- 댓글 등록 라인 -->
-<%-- <div class="input-group mb-3">
-  <span class="input-group-text" id="cmtWriter">${ses.id }</span>
-  <input type="text" id="cmtText" class="form-control" placeholder="Add Comment..." aria-label="Username" aria-describedby="basic-addon1">
-  <button type="button" id="cmtAddBtn" class="btn btn-secondary">댓글 등록</button>
-</div> --%>
+	<!-- 댓글 등록 라인 -->
+	
+	<div class="input-group mb-3">
+		<span class="input-group-text" id="cmtWriter">관리자</span> <input
+			type="text" id="cmtText" class="form-control"
+			placeholder="Add Comment..." aria-label="Username"
+			aria-describedby="basic-addon1">
+		<button type="button" id="cmtAddBtn" class="btn btn-secondary">댓글
+			등록</button>
+	</div>
 
-<!-- 댓글 출력 라인 -->
+	<!-- 댓글 출력 라인 -->
 
-<!-- <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        cno, writer, reg_date
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>댓글 내용표시</strong>
-      </div>
-    </div>
-  </div>
-</div> -->
+	<ul class="list-group list-group-flush" id="cmtListArea">
+		<li class="list-group-item">
+			<div class="input-group mb-3">
+				<div class="fw-bold">Writer</div>
+				content
+			</div> <span class="badge rounded-pill text-bg-warning">등록시간(regDate)</span>
+		</li>
+	</ul>
 
-<br>
-<hr>
+	<!-- 댓글 더보기 버튼 -->
+	<!-- visibility : disable이랑 다르게 모양이 흐트러지지 않는다 -->
+	<div class="d-grid gap-2 col-3 mx-auto">
+		<button type="button" id="moreBtn" data-page="1" class="btn btn-outline-secondary"
+			style="visibility: hidden">More +</button>
+	</div>
 
-<a href="/board/modify?bno=${bvo.bno }"><button type="button" class="btn btn-warning">수정</button></a> 
-<a href="/board/remove?bno=${bvo.bno }"><button type="button" class="btn btn-danger">삭제</button></a> 
+	<!-- 모달창 라인 -->
 
+	<div class="modal" id="myModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Writer</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="cmtTextMod">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="cmtModBtn">modify</button>
+					<button type="button" class="btn btn-secondary"data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<a href="/board/list"><button type="button" class="btn btn-primary">list</button></a> 
-<br><br><br><br><br><br>
+	<br>
+	<hr>
+
+	<a href="/board/modify?bno=${bvo.bno }"><button type="button"
+			class="btn btn-warning">수정</button></a> <a
+		href="/board/remove?bno=${bvo.bno }"><button type="button"
+			class="btn btn-danger">삭제</button></a> <a href="/board/list"><button
+			type="button" class="btn btn-primary">list</button></a> <br> <br>
+	<br> <br> <br> <br>
 
 </div>
 <jsp:include page="../layout/footer.jsp" />
 
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 const bnoVal = `<c:out value="${bvo.bno}"/>`;
-const writerVal = `<c:out value="${ses.id}"/>`;
+/* const writerVal = `<c:out value="${ses.id}"/>`; */
 </script>
-<script type="text/javascript" src="/resources/js/boardDetailComment.js" ></script>
+
+<script type="text/javascript" src="/re/js/boardDetailComment.js"></script>
 
 <script type="text/javascript">
 spreadCommentList(bnoVal);
-</script> -->
+</script>  
 
 
 

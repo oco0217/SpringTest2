@@ -1,0 +1,2 @@
+console.log("boardDetailCommnt Js 잘 연결되었나 콘솔 확인");
+console.log('bnoVal 확인 : ' + bnoVal);
