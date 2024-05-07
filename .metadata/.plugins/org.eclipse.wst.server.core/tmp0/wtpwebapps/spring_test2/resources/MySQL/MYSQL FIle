@@ -1,0 +1,21 @@
+
+
+<-- User Table -->
+
+CREATE TABLE user(
+email VARCHAR(100) NOT NULL,
+pwd VARCHAR(256) NOT NULL,
+nick_name VARCHAR(100) NOT NULL,
+reg_date DATETIME DEFAULT NOW(),
+last_login DATETIME DEFAULT NULL,
+primary key(email)
+);
+
+
+--auth table
+
+CREATE TABLE auth_user(
+email VARCHAR(100) NOT NULL,
+auth VARCHAR(50) NOT NULL);
+
+alter table auth_user add constraint fk_auth foreign key(email) references user(email);

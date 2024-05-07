@@ -7,9 +7,9 @@
 <div  class="container-md">
 <h1>Board Modify Page</h1>
 
-<%-- <c:set value="${bdto.bvo }" var="bvo"></c:set> --%>
+ <c:set value="${bdto.bvo }" var="bvo"></c:set> 
 
-<form action="/board/modify" method="post">
+<form action="/board/modify" method="post" enctype="multipart/form-data">
 <div class="mb-3">
   <label for="n" class="form-label">bno</label>
   <input type="text" class="form-control" id="n" placeholder="bno" name="bno" value="${bvo.bno }" readonly="readonly">
@@ -36,7 +36,7 @@
 
 
 <!-- FIle upload 표시라인 -->
-<%-- <c:set value="${bdto.flist }" var="flist" />
+ <c:set value="${bdto.flist }" var="flist" />
 
 	<div class="mb-3">
 
@@ -48,10 +48,10 @@
 
 			<c:forEach items="${flist }" var="fvo">
 				<li class="list-group-item"><c:choose>
-						<c:when test="${fvo.file_type > 0 }">
+						<c:when test="${fvo.fileType > 0 }">
 							<div>
 								<img alt=""
-									src="/upload/${fvo.save_dir }/${fvo.uuid}_${fvo.file_name}">
+									src="/up/${fvo.saveDir }/${fvo.uuid}_th_${fvo.fileName}">
 							</div>
 						</c:when>
 						<c:otherwise>
@@ -61,8 +61,8 @@
 						</c:otherwise>
 					</c:choose>
 					<div>
-						<div>${fvo.file_name }</div>
-						${fvo.reg_date } <span class="badge text-bg-warning">${fvo.file_size }Byte</span>
+						<div>${fvo.fileName }</div>
+						${fvo.regDate } <span class="badge text-bg-warning">${fvo.fileSize }Byte</span>
 						<button type="button" class="btn btn-outline-danger file-x" data-uuid="${fvo.uuid }"  data-bno="${fvo.bno }">X</button>
 						
 					</div></li>
@@ -89,7 +89,6 @@
 		<div class="mb-3" id="fileZone">
 		
 		</div>
-		 --%>
 		
 
 		<a><button type="submit" class="btn btn-warning" id="regBtn">수정</button></a> 
@@ -99,6 +98,7 @@
 </div>
 <jsp:include page="../layout/footer.jsp" />
 
-<!-- <script type="text/javascript" src="/resources/js/boardModify.js"></script>
-<script type="text/javascript" src="/resources/js/boardRegister.js"></script> -->
+
+<script type="text/javascript" src="/re/js/boardModify.js"></script>
+<script type="text/javascript" src="/re/js/boardRegister.js"></script>
 

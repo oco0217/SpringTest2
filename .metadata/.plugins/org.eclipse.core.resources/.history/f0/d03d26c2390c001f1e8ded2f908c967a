@@ -1,0 +1,12 @@
+package com.ezen.www.domain;
+
+import lombok.Getter;
+
+@Getter
+
+public class AuthVO {
+
+	private String email;
+	private String auth;
+	
+}

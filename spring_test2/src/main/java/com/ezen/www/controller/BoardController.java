@@ -2,9 +2,14 @@ package com.ezen.www.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -79,17 +84,29 @@ public class BoardController {
 
 		log.info(">>>detail로 들어오는 bno 확인{}", bno);
 
-		BoardVO bvo = bsv.getDetail(bno);
+		BoardDTO bdto = bsv.getDetail(bno);
 
-		m.addAttribute("bvo", bvo);
+		m.addAttribute("bdto", bdto);
 
 	}
 
 	@PostMapping("/modify")
-	public String modify(BoardVO bvo, RedirectAttributes re) {
+	public String modify(BoardVO bvo, RedirectAttributes re,@RequestParam(name = "files", required = false) MultipartFile[] files) {
 
-		int isOk = bsv.update(bvo);
+		
+		List<FileVO> flist = null;
+		
+		if(files[0].getSize() > 0) {
+			flist = fh.uploadFiles(files);
+		}
+		
+		BoardDTO bdto = new BoardDTO(bvo, flist);
+		
+//		log.info(">>>>bdto확인 >>>>>{}",bdto);
+		
+		int isOk = bsv.update(bdto);
 
+		
 		re.addAttribute("bno", bvo.getBno());
 
 //		return "redirect:/board/detail?bno="+bvo.getBno();
@@ -109,5 +126,14 @@ public class BoardController {
 
 		return "redirect:/board/list";
 	}
-
+	
+	@DeleteMapping(value = "/fileRemove/{uuid}", produces =  MediaType.TEXT_PLAIN_VALUE)
+	ResponseEntity<String>fileRemove(@PathVariable("uuid")String uuid){
+		
+		int isOk = bsv.fileRemove(uuid);
+		
+		return isOk > 0 ? new ResponseEntity<String>("1",HttpStatus.OK) : 
+			new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
 }

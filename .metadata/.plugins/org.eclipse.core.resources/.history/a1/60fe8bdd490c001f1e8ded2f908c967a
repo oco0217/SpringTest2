@@ -1,0 +1,13 @@
+package com.ezen.www.service;
+
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class UserServiceImple implements UserService{
+
+	private final UserDAO udao;
+	
+}

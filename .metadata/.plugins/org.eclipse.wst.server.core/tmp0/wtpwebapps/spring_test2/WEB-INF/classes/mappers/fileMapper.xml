@@ -9,4 +9,27 @@ INSERT INTO file(uuid,save_dir,file_name,file_type,bno,file_size)
 VALUES (#{uuid}, #{saveDir}, #{fileName}, #{fileType}, #{bno}, #{fileSize})
 </insert>
 
+<select id="getList" resultType="com.ezen.www.domain.FileVO">
+SELECT * FROM file 
+WHERE 
+bno = #{bno}
+ORDER BY reg_date DESC
+</select>
+
+<delete id="fileRemove">
+DELETE FROM file
+WHERE 
+uuid = #{uuid}
+</delete>
+
+<select id="selectListAllFile" resultType="com.ezen.www.domain.FileVO"> 
+SELECT * FROM file
+</select>
+
+<delete id="deleteFile">
+DELETE FROM file
+WHERE 
+bno = #{bno}
+</delete>
+
 </mapper>

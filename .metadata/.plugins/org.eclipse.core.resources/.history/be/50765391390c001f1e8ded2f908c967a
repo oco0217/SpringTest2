@@ -1,0 +1,12 @@
+package com.ezen.www.domain;
+
+public class UserVO {
+
+	private String email;
+	private String pwd;
+	private String nickName;
+	private String regDate;
+	private String lastLogin;
+	private List<AuthVO> authList;
+	
+}

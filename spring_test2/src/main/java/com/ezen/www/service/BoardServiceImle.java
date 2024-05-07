@@ -59,22 +59,55 @@ public class BoardServiceImle implements BoardService{
 		return bdao.getList(pgvo);
 	}
 
+	@Transactional
 	@Override
-	public BoardVO getDetail(int bno) {
+	public BoardDTO getDetail(int bno) {
 
-		return bdao.selectOne(bno);
+		//bvo, flist 묶어서 DTO retrun
+		
+		BoardVO bvo =  bdao.selectOne(bno);
+		
+		List<FileVO> flist = fdao.getList(bno);
+		
+		BoardDTO bdto = new BoardDTO(bvo,flist);
+		
+		return bdto;
 	}
 
+	@Transactional
 	@Override
-	public int update(BoardVO bvo) {
+	public int update(BoardDTO bdto) {
 
-		return bdao.update(bvo);
+		int isOk = bdao.update(bdto.getBvo());
+		
+		if(bdto.getFlist() == null) {
+			return isOk;
+		}
+		
+		//bvo 업데이트 완료 후에도 파일이 있다면 
+		if(isOk>0 && bdto.getFlist().size() > 0) {
+			
+			for(FileVO fvo : bdto.getFlist()) {
+				
+				fvo.setBno(bdto.getBvo().getBno());
+				
+				isOk *= fdao.insert(fvo);
+			}
+		}
+		return isOk;
+		
 	}
 
 	@Override
 	public int delete(int bno) {
 
-		return bdao.delete(bno);
+		int isOk = bdao.delete(bno);
+		
+		if(isOk > 0) {
+		fdao.deleteFile(bno);	
+		}
+		
+		return isOk; 
 	}
 
 	@Override
@@ -82,5 +115,13 @@ public class BoardServiceImle implements BoardService{
 
 		return bdao.getTotal(pgvo);
 	}
+
+	@Override
+	public int fileRemove(String uuid) {
+		
+		return fdao.fileRemove(uuid);
+	}
+
+
 
 }

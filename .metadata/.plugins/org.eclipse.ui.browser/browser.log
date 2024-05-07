@@ -225,3 +225,34 @@
 5월 03, 2024 17:54:33.57 NEW SESSION
 5월 03, 2024 17:54:33.57 Created TensorFlow Lite XNNPACK delegate for CPU.
 5월 03, 2024 18:01:13.266 [13032:5476:0503/180113.265:ERROR:device_event_log_impl.cc(195)] [18:01:13.266] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+
+5월 07, 2024 09:42:53.488 NEW SESSION
+5월 07, 2024 09:42:53.488 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 13:15:22.887 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 13:16:59.924 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 13:19:04.254 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 13:19:20.690 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 14:24:40.601 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 14:26:38.431 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 07, 2024 14:29:24.820 NEW SESSION
+5월 07, 2024 14:29:24.820 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 14:54:33.786 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 15:08:31.521 [1424:10316:0507/150831.521:ERROR:device_event_log_impl.cc(195)] [15:08:31.521] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 15:16:36.862 [1424:10316:0507/151636.862:ERROR:device_event_log_impl.cc(195)] [15:16:36.862] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 15:38:43.859 [1424:10316:0507/153843.859:ERROR:device_event_log_impl.cc(195)] [15:38:43.858] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 16:22:33.348 [1424:10316:0507/162233.348:ERROR:device_event_log_impl.cc(195)] [16:22:33.348] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 16:42:29.891 [1424:10316:0507/164229.891:ERROR:device_event_log_impl.cc(195)] [16:42:29.891] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 16:44:11.358 [1424:10316:0507/164411.358:ERROR:device_event_log_impl.cc(195)] [16:44:11.358] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 17:20:44.205 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 07, 2024 17:53:27.06 NEW SESSION
+5월 07, 2024 17:53:27.06 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 17:53:44.352 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 17:55:39.780 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 07, 2024 17:56:29.739 NEW SESSION
+5월 07, 2024 17:56:29.739 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2024 17:58:53.137 [8504:10568:0507/175853.137:ERROR:device_event_log_impl.cc(195)] [17:58:53.137] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 07, 2024 18:00:40.541 [8504:10568:0507/180040.541:ERROR:device_event_log_impl.cc(195)] [18:00:40.540] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 07, 2024 18:14:14.374 [8504:10568:0507/181414.374:ERROR:device_event_log_impl.cc(195)] [18:14:14.382] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)

@@ -1,4 +1,4 @@
-// console.log('board Register JavaScript in');
+console.log('board Register JavaScript in');
 // console.log('잘나왔는지 출력');
 
 //trigger Button 처리

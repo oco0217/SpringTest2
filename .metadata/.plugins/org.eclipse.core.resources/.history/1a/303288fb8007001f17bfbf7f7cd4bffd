@@ -1,9 +1,0 @@
-package com.ezen.www.service;
-
-import com.ezen.www.repository.BoardDAO;
-
-public class BoardServiceImle implements BoardService{
-	
-	private final BoardDAO bdao;
-
-}

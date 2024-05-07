@@ -20,8 +20,11 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @MapperScan(basePackages = {"com.ezen.www.repository"})
 @EnableTransactionManagement
+
 @EnableScheduling
 public class RootConfig {
+//파일을 삭제하면 myproject에 저장된 파일도 삭제되게 해주는 annotation
+//매일 지정된 시간에 맞춰서 DB에 없는 파일들을 지정된 시간에 자동으로 삭제되게 해주기
 
 	//spring 것으로 가져와야됌
 	

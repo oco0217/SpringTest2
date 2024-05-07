@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.ezen.www.domain.BoardDTO;
 import com.ezen.www.domain.BoardVO;
+import com.ezen.www.domain.FileVO;
 import com.ezen.www.domain.PagingVO;
 
 public interface BoardService {
@@ -12,12 +13,15 @@ public interface BoardService {
 
 	List<BoardVO> getList(PagingVO pgvo);
 
-	BoardVO getDetail(int bno);
+	BoardDTO getDetail(int bno);
 
-	int update(BoardVO bvo);
+	int update(BoardDTO bdto);
 
 	int delete(int bno);
 
 	int getTotal(PagingVO pgvo);
+
+	int fileRemove(String uuid);
+
 
 }

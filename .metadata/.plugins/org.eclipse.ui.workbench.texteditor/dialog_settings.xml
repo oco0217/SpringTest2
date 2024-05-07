@@ -6,8 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="FileName"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="delete"/>
+			<item value="FileSweeper Running Start~!!"/>
+			<item value="today"/>
+			<item value="tika"/>
+			<item value="bdto"/>
 			<item value="FileName"/>
 			<item value="확인"/>
 			<item value="값"/>
@@ -22,7 +27,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1158"/>
+		<item key="DIALOG_X_ORIGIN" value="807"/>
 		<item key="DIALOG_Y_ORIGIN" value="218"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

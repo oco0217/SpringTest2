@@ -21,5 +21,6 @@ public class FileVO {
 	private int bno;
 	private Long fileSize;
 	private String regDate;
-	
+
+
 }
