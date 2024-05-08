@@ -6,8 +6,13 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="&gt;&gt;&gt;"/>
 		<list key="findhistory">
+			<item value="&gt;&gt;&gt;"/>
+			<item value="email"/>
+			<item value="User"/>
+			<item value="list"/>
+			<item value="UserDetails"/>
 			<item value="delete"/>
 			<item value="FileSweeper Running Start~!!"/>
 			<item value="today"/>
@@ -18,10 +23,6 @@
 			<item value="값"/>
 			<item value="cno"/>
 			<item value="cvo"/>
-			<item value="&gt;&gt;&gt;"/>
-			<item value="total"/>
-			<item value="check"/>
-			<item value="bno"/>
 		</list>
 		<list key="replacehistory">
 		</list>

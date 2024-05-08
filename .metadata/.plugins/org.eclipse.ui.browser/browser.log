@@ -256,3 +256,95 @@
 5월 07, 2024 17:58:53.137 [8504:10568:0507/175853.137:ERROR:device_event_log_impl.cc(195)] [17:58:53.137] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
 5월 07, 2024 18:00:40.541 [8504:10568:0507/180040.541:ERROR:device_event_log_impl.cc(195)] [18:00:40.540] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
 5월 07, 2024 18:14:14.374 [8504:10568:0507/181414.374:ERROR:device_event_log_impl.cc(195)] [18:14:14.382] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+
+5월 08, 2024 09:32:44.226 NEW SESSION
+5월 08, 2024 09:32:44.226 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 09:33:07.730 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 08, 2024 09:33:47.43 NEW SESSION
+5월 08, 2024 09:33:47.43 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 09:44:06.263 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 09:53:04.282 [10408:10988:0508/095304.282:ERROR:device_event_log_impl.cc(195)] [09:53:04.282] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 09:53:19.755 [10408:10988:0508/095319.755:ERROR:device_event_log_impl.cc(195)] [09:53:19.754] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 09:59:03.379 [10408:10988:0508/095903.378:ERROR:device_event_log_impl.cc(195)] [09:59:03.379] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 10:02:29.597 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 10:08:01.720 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 10:11:39.715 [7420:7588:0508/101139.715:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 08, 2024 10:12:30.182 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 11:22:10.575 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 11:27:38.600 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 11:29:03.171 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 08, 2024 11:46:36.605 NEW SESSION
+5월 08, 2024 11:46:36.606 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 11:50:36.881 [680:6332:0508/115036.880:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:36.983 [680:6332:0508/115036.983:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.87 [680:6332:0508/115037.087:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.202 [680:6332:0508/115037.202:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.320 [680:6332:0508/115037.320:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.437 [680:6332:0508/115037.437:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.578 [680:6332:0508/115037.578:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.684 [680:6332:0508/115037.684:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:37.943 [680:6332:0508/115037.943:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:38.75 [680:6332:0508/115038.075:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:38.791 [680:6332:0508/115038.791:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:38.930 [680:6332:0508/115038.930:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:40.133 [680:6332:0508/115040.133:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:40.236 [680:6332:0508/115040.235:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:40.353 [680:6332:0508/115040.352:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:41.134 [680:6332:0508/115041.134:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:41.433 [680:6332:0508/115041.433:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:41.535 [680:6332:0508/115041.535:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:41.667 [680:6332:0508/115041.667:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:42.28 [680:6332:0508/115042.028:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:42.185 [680:6332:0508/115042.185:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:43.218 [680:6332:0508/115043.218:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:43.335 [680:6332:0508/115043.335:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:43.454 [680:6332:0508/115043.453:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:43.631 [680:6332:0508/115043.631:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:43.869 [680:6332:0508/115043.869:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:43.986 [680:6332:0508/115043.986:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:46.619 [680:6332:0508/115046.619:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:46.762 [680:6332:0508/115046.762:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:46.889 [680:6332:0508/115046.889:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:47.00 [680:6332:0508/115047.000:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:47.786 [680:6332:0508/115047.785:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:47.916 [680:6332:0508/115047.916:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:48.336 [680:6332:0508/115048.336:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:50:48.453 [680:6332:0508/115048.453:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.401 s for first_image_paint 0.389 s
+5월 08, 2024 11:51:31.938 [680:6332:0508/115131.938:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 08, 2024 11:51:51.204 [680:6332:0508/115151.203:ERROR:interface_endpoint_client.cc(707)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 08, 2024 11:54:46.876 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:05:48.99 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:20:03.417 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:29:23.205 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:30:36.335 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:37:13.630 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:40:02.972 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:40:46.166 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:42:32.932 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 12:58:00.713 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 13:33:49.542 [6420:4788:0508/133349.542:ERROR:device_event_log_impl.cc(195)] [13:33:49.542] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 14:32:51.125 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 14:38:10.782 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 14:45:05.59 [7756:8620:0508/144505.058:ERROR:device_event_log_impl.cc(195)] [14:45:05.059] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 14:46:39.794 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 14:46:41.894 [8464:1772:0508/144641.894:ERROR:device_event_log_impl.cc(195)] [14:46:41.893] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 14:52:13.509 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 15:04:59.225 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 15:05:08.954 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 15:06:24.305 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 15:15:14.421 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 16:39:18.805 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 16:51:46.60 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 17:44:56.141 [3268:6744:0508/174456.141:ERROR:device_event_log_impl.cc(195)] [17:44:56.141] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 17:47:17.343 [3268:6744:0508/174717.343:ERROR:device_event_log_impl.cc(195)] [17:47:17.343] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 17:57:36.775 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 17:59:13.357 [4252:12040:0508/175913.357:ERROR:device_event_log_impl.cc(195)] [17:59:13.356] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 18:03:26.813 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 18:05:36.152 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 18:05:45.432 [2824:1452:0508/180545.432:ERROR:device_event_log_impl.cc(195)] [18:05:45.433] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 18:12:34.946 [2824:1452:0508/181234.945:ERROR:device_event_log_impl.cc(195)] [18:12:34.945] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 18:14:34.573 [2824:1452:0508/181434.573:ERROR:device_event_log_impl.cc(195)] [18:14:34.573] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 08, 2024 18:16:34.496 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2024 18:17:15.795 Created TensorFlow Lite XNNPACK delegate for CPU.

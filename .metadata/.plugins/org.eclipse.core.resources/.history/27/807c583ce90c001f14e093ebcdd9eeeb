@@ -1,0 +1,65 @@
+package com.ezen.www.security;
+
+import java.io.IOException;
+
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
+import org.springframework.security.web.savedrequest.RequestCache;
+import org.springframework.stereotype.Component;
+
+import com.ezen.www.service.UserService;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
+@Component
+@Slf4j
+public class LoginSuccessHandler implements AuthenticationSuccessHandler {
+
+	@Getter
+	@Setter
+	private String authEamil;
+	
+	@Getter
+	@Setter
+	private String authUrl;
+	
+	//redirect 데이터를 가지고 리다이렉트 하는 역할
+	private RedirectStrategy redstg = new DefaultRedirectStrategy();
+	
+	//로그인에 대한 정보나 경로
+	private RequestCache reqCache = new HttpSessionRequestCache();
+	
+	//로으인 일자 기록 lastLogin
+	@Inject
+	private UserService usv;
+	
+	
+	@Override
+	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+			Authentication authentication) throws IOException, ServletException {
+
+		//authentication 인증된 AuthUser 객체
+		setAuthEamil(authentication.getName());
+		setAuthUrl("/");
+		
+		//로그인 일자 기록 lastLogin
+		
+	}
+
+}
+
+
+
+
+
+

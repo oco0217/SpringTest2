@@ -1,9 +1,0 @@
-package com.ezen.www.controller;
-
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-@reuq
-public class UserController {
-
-}

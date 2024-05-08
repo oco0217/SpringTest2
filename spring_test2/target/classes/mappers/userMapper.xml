@@ -9,4 +9,55 @@ INSERT INTO user (email,pwd,nick_name)
 VALUES (#{email}, #{pwd}, #{nickName})
 </insert>
 
+<insert id="insertAuthInit">
+INSERT INTO auth_user
+VALUES (#{email}, 'ROLE_USER')
+</insert>
+
+<select id="selectEmail" resultType="com.ezen.www.domain.UserVO">
+SELECT * FROM user
+WHERE 
+email = #{email}
+</select>
+
+<select id="selectAuths" resultType="com.ezen.www.domain.AuthVO">
+SELECT * FROM auth_user
+WHERE
+email = #{email}
+</select>
+
+<update id="updateLastLogin">
+UPDATE user SET
+last_login = now()
+WHERE
+email = #{authEmail}
+</update>
+
+<select id="getList" resultType="com.ezen.www.domain.UserVO">
+SELECT * FROM user
+</select>
+
+<select id="getAuthList" resultType="com.ezen.www.domain.AuthVO">
+SELECT * FROM auth_user
+WHERE email = #{email}
+</select>
+
+<select id="getDetail" resultType="com.ezen.www.domain.UserVO">
+SELECT * FROM user
+WHERE email = #{email}
+</select>
+
+<update id="update">
+UPDATE user SET
+nick_name = #{nickName}
+WHERE 
+email = #{email}
+</update>
+
 </mapper>
+
+
+
+
+
+

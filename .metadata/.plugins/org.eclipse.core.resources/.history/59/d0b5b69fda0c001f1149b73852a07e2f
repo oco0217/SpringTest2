@@ -1,0 +1,7 @@
+package com.ezen.www.security;
+
+import org.springframework.security.core.userdetails.User;
+
+public class AuthUser extends User{
+
+}

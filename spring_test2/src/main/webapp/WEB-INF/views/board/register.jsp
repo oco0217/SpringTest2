@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <jsp:include page="../layout/header.jsp" />
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+
+<sec:authentication property="principal.uvo.nickName" var="authNick"/>
 
 <div class="container-md">
 	<h1>Board Register Page</h1>
@@ -13,7 +16,7 @@
 		<div class="mb-3">
 			<label for="w" class="form-label">writer</label> <input type="text"
 				class="form-control" id="w" placeholder="writer" name="writer"
-				value="${ses.id }">
+				value="${authNick }" readonly="readonly">
 		</div>
 		<div class="mb-3">
 			<label for="w" class="form-label">content</label>

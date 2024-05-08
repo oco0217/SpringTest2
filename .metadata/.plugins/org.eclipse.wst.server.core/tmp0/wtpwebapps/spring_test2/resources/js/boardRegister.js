@@ -68,3 +68,11 @@ document.addEventListener('change',(e)=>{
     }
 
 })
+
+
+
+document.getElementById('logoutLink').addEventListener('click',()=>{
+
+    document.getElementById('logoutForm').submit();
+
+});

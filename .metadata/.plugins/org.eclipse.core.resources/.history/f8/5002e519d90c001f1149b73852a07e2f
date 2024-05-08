@@ -1,0 +1,25 @@
+package com.ezen.www.security;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class CustomAuthUserService implements UserDetailsService {
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		
+		// username : 로그인을 시도한 email
+		// UserDetails를 리턴
+		// UserDetails : 인증용 객체
+		// username이 DB에 있는지 확인하여 인증용 객체를 리턴
+		
+
+		
+		return null;
+	}
+
+}
