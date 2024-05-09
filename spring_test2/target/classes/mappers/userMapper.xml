@@ -42,17 +42,35 @@ SELECT * FROM auth_user
 WHERE email = #{email}
 </select>
 
-<select id="getDetail" resultType="com.ezen.www.domain.UserVO">
-SELECT * FROM user
-WHERE email = #{email}
-</select>
-
 <update id="update">
 UPDATE user SET
 nick_name = #{nickName}
+
+<if test="pwd != null">
+,pwd = #{pwd}
+</if>
+
 WHERE 
 email = #{email}
 </update>
+
+<delete id="deleteUserAuth">
+DELETE FROM auth_user
+WHERE email = #{email}
+</delete>
+
+<delete id="delete">
+DELETE FROM user 
+WHERE email = #{email}
+</delete>
+
+<select id="doubleCheck" resultType="com.ezen.www.domain.UserVO">
+SELECT * FROM user
+WHERE
+email = #{email}
+</select>
+
+
 
 </mapper>
 

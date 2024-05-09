@@ -10,9 +10,11 @@ public interface UserService {
 
 	List<UserVO> getList();
 
-	UserVO getDetail(String email);
-
 	int update(UserVO uvo);
+
+	int delete(String email);
+
+	UserVO doubleCheck(String email);
 
 
 }

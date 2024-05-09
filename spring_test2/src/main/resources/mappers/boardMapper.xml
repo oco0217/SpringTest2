@@ -46,6 +46,27 @@ SELECT max(bno) FROM board
 WHERE isDel = 'N'
 </select>
 
+<update id="readCountUpdate">
+UPDATE board SET
+read_count = read_count + 1
+WHERE
+bno = #{bno}
+</update>
+
+<update id="commentCountUpdate">
+UPDATE board SET
+cmt_qty = cmt_qty + ${cmtQty}
+WHERE
+bno = #{bno}
+</update>
+
+
+<update id="fileCountUpdate">
+UPDATE board SET
+has_file = has_file + #{hasFile}
+WHERE
+bno = #{bno}
+</update>
 
 <!-- Search -->
 <sql id="search">

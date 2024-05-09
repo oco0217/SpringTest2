@@ -1,0 +1,141 @@
+package com.ezen.www.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ezen.www.domain.BoardDTO;
+import com.ezen.www.domain.BoardVO;
+import com.ezen.www.domain.FileVO;
+import com.ezen.www.domain.PagingVO;
+import com.ezen.www.repository.BoardDAO;
+import com.ezen.www.repository.FileDAO;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+
+@RequiredArgsConstructor
+@Service
+@Slf4j
+public class BoardServiceImle implements BoardService{
+	
+	private final BoardDAO bdao;
+	private final FileDAO fdao;
+
+	@Transactional
+	@Override
+	public int insert(BoardDTO bdto) {
+
+		//bvo 저장 후 bno setting 한 후 fileVO 저장
+		
+		
+		
+		int isOk = bdao.insert(bdto.getBvo());
+		
+		if(bdto.getFlist() == null) {
+			return isOk;
+		}
+		
+		if(isOk > 0 && bdto.getFlist().size() > 0) {
+			
+			
+			//bno settting
+			//트랜잭션은 여러개의 DB요청이 있을때 다른 insert 구문을 사용하는 곳에 영향을 받지 않는다. 
+			int bno = bdao.selectOneBno(); //가장 마지막에 등록된 bno
+			
+			for(FileVO fvo : bdto.getFlist()) {
+				fvo.setBno(bno);
+				isOk *= fdao.insert(fvo);
+			}
+			
+			bdto.getBvo().setBno(bno);
+			bdto.getBvo().setHasFile(bdto.getFlist().size());
+			bdao.fileCountUpdate(bdto.getBvo());
+			
+		}
+		
+		return isOk;
+		
+	}
+
+	@Override
+	public List<BoardVO> getList(PagingVO pgvo) {
+
+		return bdao.getList(pgvo);
+	}
+
+	@Transactional
+	@Override
+	public BoardDTO getDetail(int bno) {
+
+		//readCount(조회수) 추가
+		bdao.readCountUpdate(bno);
+		
+		//bvo, flist 묶어서 DTO retrun
+		
+		BoardVO bvo =  bdao.selectOne(bno);
+		
+		List<FileVO> flist = fdao.getList(bno);
+		
+		BoardDTO bdto = new BoardDTO(bvo,flist);
+		
+		return bdto;
+	}
+
+	@Transactional
+	@Override
+	public int update(BoardDTO bdto) {
+
+		int isOk = bdao.update(bdto.getBvo());
+		
+		if(bdto.getFlist() == null) {
+			return isOk;
+		}
+		
+		//bvo 업데이트 완료 후에도 파일이 있다면 
+		if(isOk>0 && bdto.getFlist().size() > 0) {
+			
+			for(FileVO fvo : bdto.getFlist()) {
+				
+				fvo.setBno(bdto.getBvo().getBno());
+				
+				isOk *= fdao.insert(fvo);
+			}
+			
+			bdto.getBvo().setHasFile(bdto.getFlist().size());
+			bdao.fileCountUpdate(bdto.getBvo());
+			
+		}
+		return isOk;
+		
+	}
+
+	@Override
+	public int delete(int bno) {
+
+		int isOk = bdao.delete(bno);
+		
+		if(isOk > 0) {
+		fdao.deleteFile(bno);	
+		}
+		
+		return isOk; 
+	}
+
+	@Override
+	public int getTotal(PagingVO pgvo) {
+
+		return bdao.getTotal(pgvo);
+	}
+
+	@Override
+	public int fileRemove(String uuid) {
+		
+		return fdao.fileRemove(uuid);
+	}
+
+
+
+}

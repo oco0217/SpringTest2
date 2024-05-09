@@ -85,10 +85,10 @@ public class CommentController {
 //
 //	}
 	
-	@DeleteMapping("/{cno}")
-	public String remove(@PathVariable("cno")int cno) {
+	@DeleteMapping("/remove")
+	public String remove(@RequestBody CommentVO cvo) {
 		
-		int isOk = csv.delete(cno);
+		int isOk = csv.delete(cvo);
 		
 		return isOk > 0 ? "1" : "0";
 		

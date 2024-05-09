@@ -11,6 +11,7 @@
 		<div class="mb-3">
 			<label for="e" class="form-label">E-Mail</label> <input type="text"
 				class="form-control" id="e" placeholder="E-mail입력..." name="email">
+				<button type="button" class="btn btn-info" id="doubleCheck">중복확인</button>
 		</div>
 		<div class="mb-3">
 			<label for="p" class="form-label">PW</label> <input type="password"
@@ -22,10 +23,12 @@
 		</div>
 
 
-		<button type="submit" class="btn btn-primary">회원가입</button>
+		<button type="submit" class="btn btn-primary" id="joinBtn" disabled="disabled">회원가입</button>
 
 	</form>
 
 </div>
 
 <jsp:include page="../layout/footer.jsp" />
+
+<script type="text/javascript" src="/re/js/userRegister.js"></script>

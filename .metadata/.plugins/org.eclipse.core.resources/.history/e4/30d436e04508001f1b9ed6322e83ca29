@@ -1,9 +1,0 @@
-package com.ezen.www.service;
-
-import com.ezen.www.repository.CommentDAO;
-
-public class CommentServiceImple implements CommentService{
-	
-	private final CommentDAO cdao;
-
-}

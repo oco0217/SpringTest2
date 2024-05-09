@@ -5,14 +5,18 @@ document.addEventListener('click',(e)=>{
     if(e.target.classList.contains('file-x')){
 
         const uuid = e.target.dataset.uuid;
-        // console.log(uuid);
+        const bnoVal = e.target.dataset.bno;
+        console.log(uuid);
+        console.log(bnoVal);
+        const fileData = {
+            uuid : uuid,
+            bno : bnoVal
+        };
 
-        sendBoardModifyToServer(uuid).then(result=>{
+        sendBoardModifyToServer(fileData).then(result=>{
             if(result == '1'){
                 alert('파일을 삭제하였습니다.');
                 e.target.closest('li').remove();
-                //파일 뿌리기
-                spreadFileList(bnoVal);
             }
         })
 
@@ -21,12 +25,16 @@ document.addEventListener('click',(e)=>{
 })
 
 
-async function sendBoardModifyToServer(uuid){
+async function sendBoardModifyToServer(fileData){
 
     try {
-        const url = '/board/fileRemove/'+uuid;
+        const url = '/board/fileRemove';
         const config = {
-            method : 'delete'
+            method : 'delete',
+            headers : {
+                'content-type' : 'application/json; charset=utf-8'
+            },
+            body : JSON.stringify(fileData)
         };
 
         const resp = await fetch(url,config);

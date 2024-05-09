@@ -10,7 +10,7 @@ public interface FileDAO {
 
 	List<FileVO> getList(int bno);
 
-	int fileRemove(String uuid);
+	int fileRemove(FileVO fvo);
 
 	List<FileVO> selectListAllFile();
 

@@ -4,6 +4,7 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <jsp:include page="../layout/header.jsp" />
 
+	
 <div class="container-md">
 	<h1>Board Detail Page</h1>
 
@@ -91,7 +92,8 @@
 
 
 	<sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal.uvo.nickName" var="authNick"/>
+	<sec:authentication property="principal.uvo.nickName" var="authNick"/> 
+	
 	<!-- 댓글 등록 라인 -->
 	<div class="input-group mb-3">
 		<span class="input-group-text" id="cmtWriter">${authNick }</span> <input
@@ -145,10 +147,14 @@
 	<br>
 	<hr>
 
+	<c:if test="${authNick eq bvo.writer }">
 	<a href="/board/modify?bno=${bvo.bno }"><button type="button"
 			class="btn btn-warning">수정</button></a> <a
 		href="/board/remove?bno=${bvo.bno }"><button type="button"
-			class="btn btn-danger">삭제</button></a> <a href="/board/list"><button
+			class="btn btn-danger">삭제</button></a> 
+	</c:if>
+			
+			<a href="/board/list"><button
 			type="button" class="btn btn-primary">list</button></a> <br> <br>
 	<br> <br> <br> <br>
 
@@ -157,7 +163,7 @@
 
  <script type="text/javascript">
 const bnoVal = `<c:out value="${bvo.bno}"/>`;
-/* const writerVal = `<c:out value="${ses.id}"/>`; */
+const nickNameVal = `<c:out value="${authNick}"/>`;
 </script>
 
 <script type="text/javascript" src="/re/js/boardDetailComment.js"></script>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -127,10 +128,10 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	@DeleteMapping(value = "/fileRemove/{uuid}", produces =  MediaType.TEXT_PLAIN_VALUE)
-	ResponseEntity<String>fileRemove(@PathVariable("uuid")String uuid){
+	@DeleteMapping(value = "/fileRemove", consumes = "application/json", produces =  MediaType.TEXT_PLAIN_VALUE)
+	ResponseEntity<String>fileRemove(@RequestBody FileVO fvo){
 		
-		int isOk = bsv.fileRemove(uuid);
+		int isOk = bsv.fileRemove(fvo);
 		
 		return isOk > 0 ? new ResponseEntity<String>("1",HttpStatus.OK) : 
 			new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);

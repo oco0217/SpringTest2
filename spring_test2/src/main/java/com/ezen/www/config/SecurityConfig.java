@@ -70,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		//auth => hasRole : 권한을 확인
 		//USER, ADMIN, MANAGER 
 		http.authorizeRequests().antMatchers("/user/list").hasRole("ADMIN")
-		.antMatchers("/", "/board/list", "/board/detail", "/comment/**", "/up/**", "/re/**", "/user/register", "/user/login").permitAll()
+		.antMatchers("/", "/board/list", "/board/detail", "/comment/**", "/up/**", "/re/**", "/user/register", "/user/login","/user/doubleCheck/*","/board/fileRemove").permitAll()
 		.anyRequest().authenticated();
 		
 		//커스텀 로그인 페이지 구성

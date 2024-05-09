@@ -30,6 +30,8 @@ public class BoardServiceImle implements BoardService{
 
 		//bvo 저장 후 bno setting 한 후 fileVO 저장
 		
+		
+		
 		int isOk = bdao.insert(bdto.getBvo());
 		
 		if(bdto.getFlist() == null) {
@@ -37,6 +39,7 @@ public class BoardServiceImle implements BoardService{
 		}
 		
 		if(isOk > 0 && bdto.getFlist().size() > 0) {
+			
 			
 			//bno settting
 			//트랜잭션은 여러개의 DB요청이 있을때 다른 insert 구문을 사용하는 곳에 영향을 받지 않는다. 
@@ -46,6 +49,10 @@ public class BoardServiceImle implements BoardService{
 				fvo.setBno(bno);
 				isOk *= fdao.insert(fvo);
 			}
+			
+			bdto.getBvo().setBno(bno);
+			bdto.getBvo().setHasFile(bdto.getFlist().size());
+			bdao.fileCountUpdate(bdto.getBvo());
 			
 		}
 		
@@ -63,6 +70,9 @@ public class BoardServiceImle implements BoardService{
 	@Override
 	public BoardDTO getDetail(int bno) {
 
+		//readCount(조회수) 추가
+		bdao.readCountUpdate(bno);
+		
 		//bvo, flist 묶어서 DTO retrun
 		
 		BoardVO bvo =  bdao.selectOne(bno);
@@ -93,6 +103,10 @@ public class BoardServiceImle implements BoardService{
 				
 				isOk *= fdao.insert(fvo);
 			}
+			
+			bdto.getBvo().setHasFile(bdto.getFlist().size());
+			bdao.fileCountUpdate(bdto.getBvo());
+			
 		}
 		return isOk;
 		
@@ -117,9 +131,14 @@ public class BoardServiceImle implements BoardService{
 	}
 
 	@Override
-	public int fileRemove(String uuid) {
+	public int fileRemove(FileVO fvo) {
 		
-		return fdao.fileRemove(uuid);
+		BoardVO bvo = new BoardVO();
+		bvo.setBno(fvo.getBno());
+		bvo.setHasFile(-1);
+		bdao.fileCountUpdate(bvo);
+		
+		return fdao.fileRemove(fvo);
 	}
 
 

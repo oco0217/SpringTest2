@@ -21,7 +21,7 @@ public interface BoardService {
 
 	int getTotal(PagingVO pgvo);
 
-	int fileRemove(String uuid);
+	int fileRemove(FileVO fvo);
 
 
 }

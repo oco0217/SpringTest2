@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.ezen.www.domain.BoardVO;
 import com.ezen.www.domain.CommentVO;
 import com.ezen.www.domain.PagingVO;
 import com.ezen.www.handler.PagingHandler;
+import com.ezen.www.repository.BoardDAO;
 import com.ezen.www.repository.CommentDAO;
 
 import lombok.RequiredArgsConstructor;
@@ -16,10 +18,18 @@ import lombok.RequiredArgsConstructor;
 public class CommentServiceImple implements CommentService{
 	
 	private final CommentDAO cdao;
+	private final BoardDAO bdao;
 
 	@Override
 	public int post(CommentVO cvo) {
-
+		
+		BoardVO bvo = new BoardVO();
+		
+		bvo.setBno(cvo.getBno());
+		bvo.setCmtQty(1);
+		
+		bdao.commentCountUpdate(bvo);
+		
 		return cdao.post(cvo);
 	}
 
@@ -41,9 +51,16 @@ public class CommentServiceImple implements CommentService{
 	}
 
 	@Override
-	public int delete(int cno) {
+	public int delete(CommentVO cvo) {
 
-		return cdao.delete(cno);
+		BoardVO bvo = new BoardVO();
+		
+		bvo.setBno(cvo.getBno());
+		bvo.setCmtQty(-1);
+		
+		bdao.commentCountUpdate(bvo);
+		
+		return cdao.delete(cvo);
 	}
 
 }

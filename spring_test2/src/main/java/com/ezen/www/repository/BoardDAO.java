@@ -22,4 +22,10 @@ public interface BoardDAO {
 
 	int selectOneBno();
 
+	void readCountUpdate(int bno);
+
+	void commentCountUpdate(BoardVO bvo);
+
+	void fileCountUpdate(BoardVO bvo);
+
 }

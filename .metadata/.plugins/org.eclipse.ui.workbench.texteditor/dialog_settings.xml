@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="&gt;&gt;&gt;"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="bnoVal"/>
+			<item value="이메일 "/>
+			<item value="uvo"/>
+			<item value="df"/>
+			<item value="업데이트"/>
+			<item value="수정"/>
+			<item value="유저 업데이트"/>
+			<item value="유저 수정"/>
+			<item value="유저 업데이"/>
+			<item value="서비스"/>
+			<item value="유저"/>
+			<item value="임플"/>
+			<item value="&gt;&gt;uvo"/>
 			<item value="&gt;&gt;&gt;"/>
 			<item value="email"/>
-			<item value="User"/>
-			<item value="list"/>
-			<item value="UserDetails"/>
-			<item value="delete"/>
-			<item value="FileSweeper Running Start~!!"/>
-			<item value="today"/>
-			<item value="tika"/>
-			<item value="bdto"/>
-			<item value="FileName"/>
-			<item value="확인"/>
-			<item value="값"/>
-			<item value="cno"/>
-			<item value="cvo"/>
 		</list>
 		<list key="replacehistory">
 		</list>

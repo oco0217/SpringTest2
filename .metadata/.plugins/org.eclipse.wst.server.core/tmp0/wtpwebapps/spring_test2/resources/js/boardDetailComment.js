@@ -1,5 +1,6 @@
 // console.log("boardDetailCommnt Js 잘 연결되었나 콘솔 확인");
 // console.log('bnoVal 확인 : '+bnoVal);
+console.log(nickNameVal +"닉네임 확인");
 
 //비동기로 cmtAddBtn을 클릭하면 bno,writer,content를 비동기로 DB에 넣기.
 
@@ -98,8 +99,10 @@ function spreadCommentList(bno, page=1){
                 str += `<div class="fw-bold">${cvo.writer}:</div>`;
                 str += `${cvo.content}`;
                 str += `</div> <span class="badge rounded-pill text-bg-warning">${cvo.regDate}</span>`;
-                str += `<button type="button" class="btn btn-outline-warning btn-sm mod" data-bs-toggle="modal" data-bs-target="#myModal">수정</button>`;
-                str += `<button type="button" data-cno=${cvo.cno} class="btn btn-outline-danger btn-sm del">삭제</button>`;
+                if(nickNameVal == cvo.writer){
+                    str += `<button type="button" class="btn btn-outline-warning btn-sm mod" data-bs-toggle="modal" data-bs-target="#myModal">수정</button>`;
+                    str += `<button type="button" data-cno=${cvo.cno} class="btn btn-outline-danger btn-sm del">삭제</button>`;
+                }
                 str += `</li>`;
 
                 div.innerHTML += str;
@@ -178,7 +181,13 @@ document.addEventListener('click',(e)=>{
     if(e.target.classList.contains('del')){
         const cnoVal = e.target.dataset.cno;
         console.log(cnoVal);
-        removeCommentToServer(cnoVal).then(result=>{
+
+        const cmtData = {
+            cno : cnoVal,
+            bno : bnoVal
+        };
+
+        removeCommentToServer(cmtData).then(result=>{
             if(result == '1'){
                 alert('삭제가 완료되었습니다.');
                 spreadCommentList(bnoVal);
@@ -216,12 +225,16 @@ async function modifyCommentToServer(cmtData){
 
 
 //댓글 삭제 서버로 요청
-async function removeCommentToServer(cno){
+async function removeCommentToServer(cmtData){
 
     try {
-        const url = '/comment/'+cno;
+        const url = '/comment/remove';
         config = {
-            method : 'delete'
+            method : 'delete',
+            headers : {
+                'content-type' : 'application/json; charset = utf-8'
+            },
+            body : JSON.stringify(cmtData)
         };
 
         const resp = await fetch(url, config);

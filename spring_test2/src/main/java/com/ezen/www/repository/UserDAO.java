@@ -21,9 +21,13 @@ public interface UserDAO {
 
 	List<AuthVO> getAuthList(String email);
 
-	UserVO getDetail(String email);
-
 	int update(UserVO uvo);
+
+	int delete(String email);
+
+	void deleteUserAuth(String email);
+
+	UserVO doubleCheck(String email);
 
 
 }

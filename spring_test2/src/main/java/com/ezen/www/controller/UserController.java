@@ -1,20 +1,28 @@
 package com.ezen.www.controller;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
+
 
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.WebAttributes;
+
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ezen.www.domain.UserVO;
@@ -77,29 +85,56 @@ public class UserController {
 	}
 	
 	@GetMapping("/modify")
-	public void modify(@RequestParam("email")String email, Model m) {
-		
-		log.info(">>>>>email{}",email);
-		
-		UserVO uvo = usv.getDetail(email);
-		
-		m.addAttribute("uvo", uvo);
+	public void modify() {
+	
 	}
 	
 	@PostMapping("/modify")
-	public String modify(UserVO uvo, HttpServletRequest request) {
+	public String modify(UserVO uvo, HttpServletRequest request, HttpServletResponse response) {
+		
+		log.info(">>>>>유저 수정uvo>>>>{}",uvo);
+		
+		
 		
 		int isOk = usv.update(uvo);
 	
-		HttpSession ses = request.getSession();
-		
-		//session값 없애기
-		ses.invalidate();
+		logout(request, response);
 		
 		return "redirect:/user/login";
 		
 	}
 	
+	@PostMapping("/remove")
+	public String remove(@RequestParam("email")String email, HttpServletRequest request,  HttpServletResponse response) {
+		
+//		log.info(">>>>삭제 이메일 확인{}",email);
+		
+		int isOk = usv.delete(email);
+		
+		logout(request, response);
+		
+		return "redirect:/"; 
+		
+	}
+	
+	@GetMapping(value = "/doubleCheck/{email}", produces = MediaType.TEXT_PLAIN_VALUE)
+	ResponseEntity<String> doubleCheck(@PathVariable("email")String email){
+		
+		UserVO uvo  = usv.doubleCheck(email);
+		
+		
+		return uvo == null ? new ResponseEntity<String>("1",HttpStatus.OK) : 
+			new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	
+	
+	private void logout(HttpServletRequest request, HttpServletResponse response) {
+		
+		//contextHolder 안에 있는 context 안에있는 Authentication을 저장
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		new SecurityContextLogoutHandler().logout(request, response, authentication);
+	}
 }
 
 
