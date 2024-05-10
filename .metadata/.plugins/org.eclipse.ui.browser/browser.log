@@ -379,3 +379,8 @@
 
 5월 09, 2024 17:18:03.431 NEW SESSION
 5월 09, 2024 17:18:03.431 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 10, 2024 10:16:23.312 NEW SESSION
+5월 10, 2024 10:16:23.312 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 10, 2024 10:29:17.42 [1028:4984:0510/102917.042:ERROR:device_event_log_impl.cc(195)] [10:29:17.041] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+5월 10, 2024 10:39:21.847 Created TensorFlow Lite XNNPACK delegate for CPU.
